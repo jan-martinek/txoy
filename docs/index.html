@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./vendor/codemirror/lib/codemirror.css">
+	<link rel="stylesheet" type="text/css" href="./vendor/foundation-sites/dist/css/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="./vendor/foundation-sites/dist/css/foundation-float.min.css">
+
+	<style>
+		h1 { margin-top: 1em; }
+		hr { margin: 2em 0; }
+		.CodeMirror { height: auto; border: 1px solid #ddd; }
+		.preview-header { display: block; border-bottom: 1px solid #aaa; }
+		.preview { background: #fafaff; padding: 20px; }
+	</style>
+</head>
+<body>
+	<div class="grid-container">
+		<div class="grid-x">
+			<div class="cell">
+				<h1>plaintext</h1>
+				<div class="toy" data-toy="plaintext"><textarea></textarea></div>
+
+				<hr>
+
+				<h1>javascript</h1>
+				<div class="toy" data-toy="javascript"><textarea></textarea></div>
+				
+				<h1>p5</h1>
+				<div class="toy" data-toy="p5"><textarea>var i = 0;
+
+p.setup = function() {
+	var size = toy.measure();
+	p.createCanvas(size.w, size.h);
+	p.angleMode(p.DEGREES);
+	
+	p.fill(100);
+	p.stroke(0);
+};
+
+p.draw = function() {
+	i = i + 1;
+	p.translate(p.width/2, p.height/2);
+	p.rotate(i%360);
+	p.background(Math.abs(((i%255)*2)-255));
+	p.rect(-20, -20, 40, 40);
+}</textarea></div>
+				
+				<h1>turtle</h1>
+				<div class="toy" data-toy="turtle"><textarea>var turtle, run;
+var size = toy.measure();
+
+p.setup = function() {
+	p.createCanvas(size.w, size.h);
+	p.angleMode(p.DEGREES);
+
+	turtle = new Turtle(p);
+	run = turtle.getRun();
+
+	turtle.penDown = false;
+	turtle.back(50);
+	turtle.left(60);
+
+	turtle.penDown = true;
+	for (var i = 0; i < 6; i++) {
+	  turtle.forward(80);
+	  turtle.right(360 / 6);
+	}
+	turtle.right(360);
+};
+
+p.draw = function() {
+	p.background(180);
+	run.animate(4);
+};</textarea></div>
+
+				<hr>
+				
+				<h1>markdown</h1>
+				<div class="toy" data-toy="markdown"><textarea></textarea></div>
+
+				<h1>live css</h1>
+				<div class="toy" data-toy="livecss"><textarea><p>xyz</p>
+
+###css###
+
+p { color: red; }</textarea></div>
+
+				<hr>
+
+				<h1>code</h1>
+				<div class="toy" data-toy="code"><textarea>program hello
+print *, "Hello World!"
+end program hello</textarea></div>
+				<h1>css</h1>
+				<div class="toy" data-toy="css"><textarea>p { color: red; }</textarea></div>
+				<h1>sql</h1>
+				<div class="toy" data-toy="sql"><textarea>SELECT * FROM myTable WHERE thatCol > 1;</textarea></div>
+				<h1>xml</h1>
+				<div class="toy" data-toy="xml"><textarea><el>el</el></textarea></div>
+				<h1>html</h1>
+				<div class="toy" data-toy="html"><textarea><!DOCTYPE html>
+<html>
+<head>
+	<title>Page title</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>Hello world.</p>
+</body>
+</html></textarea></div>
+
+				<hr>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./txoy.js"></script>
+</body>
+</html>

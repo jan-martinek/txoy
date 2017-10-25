@@ -1,0 +1,43 @@
+{
+  "name": "txoy",
+  "version": "0.1.0",
+  "description": "Txoy — transform textareas to various interactive coding editors",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "browserify src/main.js -o dist/txoy.js -t [ babelify --presets [ es2015 ] ]",
+    "watch": "watchify src/global.js -o dist/txoy.js -t [ babelify --presets [ es2015 ] ] -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jan-martinek/txoy.git"
+  },
+  "keywords": [
+    "textarea",
+    "js"
+  ],
+  "author": "Jan Martinek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jan-martinek/txoy/issues"
+  },
+  "homepage": "https://github.com/jan-martinek/txoy#readme",
+  "dependencies": {
+    "autosize": "^4.0.0",
+    "browserify": "^14.4.0",
+    "codemirror": "^5.30.0",
+    "foundation-sites": "^6.4.4-rc1",
+    "marked": "^0.3.6",
+    "p.turtle": "^0.1.2",
+    "p5": "^0.5.16"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0"
+  },
+  "babel": {
+    "env": [
+      "es2015"
+    ]
+  }
+}

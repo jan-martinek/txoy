@@ -1,0 +1,12 @@
+extends: airbnb-base
+env:
+  browser: true
+plugins:
+  - import
+rules:
+  no-eval: off
+  no-use-before-define: off
+  prefer-rest-params: off
+  comma-dangle: 
+    - error
+    - functions: never
