@@ -1,12 +1,13 @@
 {
   "name": "txoy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Txoy — transform textareas to various interactive coding editors",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "browserify src/main.js -o dist/txoy.js -t [ babelify --presets [ env ] ]",
-    "watch": "watchify src/global.js -o dist/txoy.js -t [ babelify --presets [ env ] ] -v"
+    "watch": "watchify src/global.js -o dist/txoy.js -t [ babelify --presets [ env ] ] -v",
+    "minify": "uglifyjs dist/txoy.js -mc > dist/txoy.min.js"
   },
   "repository": {
     "type": "git",
@@ -25,8 +26,8 @@
   "dependencies": {
     "autosize": "^4.0.0",
     "babel-preset-env": "^1.6.1",
-    "browserify": "^14.4.0",
-    "codemirror": "^5.30.0",
+    "browserify": "^14.5.0",
+    "codemirror": "^5.31.0",
     "foundation-sites": "^6.4.4-rc1",
     "jshint": "^2.9.5",
     "marked": "^0.3.6",
@@ -36,10 +37,5 @@
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
     "babelify": "^7.3.0"
-  },
-  "babel": {
-    "env": [
-      "es2015"
-    ]
   }
 }
