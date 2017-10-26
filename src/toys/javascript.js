@@ -1,4 +1,7 @@
 require('codemirror/mode/javascript/javascript');
+require('codemirror/addon/lint/lint');
+require('codemirror/addon/lint/javascript-lint');
+window.JSHINT = require('jshint').JSHINT;
 const CodeMirror = require('codemirror');
 
 module.exports = function JavasriptToy(playground) {
@@ -17,7 +20,7 @@ module.exports = function JavasriptToy(playground) {
       lineNumbers: true,
       lineWrapping: true,
       mode: 'javascript',
-      lint: true,
+      lint: { strict: 'implied', environment: 'browser', globals: { toy: false } },
       gutters: ['CodeMirror-lint-markers'],
       viewportMargin: Infinity,
       readOnly: this.playground.mode === 'review'

@@ -27,6 +27,7 @@
     "browserify": "^14.4.0",
     "codemirror": "^5.30.0",
     "foundation-sites": "^6.4.4-rc1",
+    "jshint": "^2.9.5",
     "marked": "^0.3.6",
     "p.turtle": "^0.1.2",
     "p5": "^0.5.16"

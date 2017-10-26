@@ -1,4 +1,7 @@
 require('codemirror/mode/javascript/javascript');
+require('codemirror/addon/lint/lint');
+require('codemirror/addon/lint/javascript-lint');
+window.JSHINT = require('jshint').JSHINT;
 const cm = require('codemirror');
 const p5 = require('p5');
 
@@ -36,6 +39,8 @@ module.exports = function P5Toy(playground) {
       lineNumbers: true,
       lineWrapping: true,
       mode: 'javascript',
+      lint: { strict: 'implied', environment: 'browser', globals: { p: false, toy: false } },
+      gutters: ['CodeMirror-lint-markers'],
       viewportMargin: Infinity,
       readOnly: this.playground.mode === 'review'
     }
