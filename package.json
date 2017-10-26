@@ -5,8 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle": "browserify src/main.js -o dist/txoy.js -t [ babelify --presets [ es2015 ] ]",
-    "watch": "watchify src/global.js -o dist/txoy.js -t [ babelify --presets [ es2015 ] ] -v"
+    "bundle": "browserify src/main.js -o dist/txoy.js -t [ babelify --presets [ env ] ]",
+    "watch": "watchify src/global.js -o dist/txoy.js -t [ babelify --presets [ env ] ] -v"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/jan-martinek/txoy#readme",
   "dependencies": {
     "autosize": "^4.0.0",
+    "babel-preset-env": "^1.6.1",
     "browserify": "^14.4.0",
     "codemirror": "^5.30.0",
     "foundation-sites": "^6.4.4-rc1",
