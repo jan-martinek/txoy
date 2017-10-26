@@ -39,7 +39,15 @@ module.exports = function P5Toy(playground) {
       lineNumbers: true,
       lineWrapping: true,
       mode: 'javascript',
-      lint: { strict: 'implied', environment: 'browser', globals: { p: false, toy: false } },
+      lint: {
+        strict: 'implied',
+        globals: {
+          window: false,
+          document: false,
+          p: false,
+          toy: false
+        }
+      },
       gutters: ['CodeMirror-lint-markers'],
       viewportMargin: Infinity,
       readOnly: this.playground.mode === 'review'

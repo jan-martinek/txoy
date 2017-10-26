@@ -20,7 +20,14 @@ module.exports = function JavasriptToy(playground) {
       lineNumbers: true,
       lineWrapping: true,
       mode: 'javascript',
-      lint: { strict: 'implied', environment: 'browser', globals: { toy: false } },
+      lint: {
+        strict: 'implied',
+        globals: {
+          window: false,
+          document: false,
+          toy: false
+        }
+      },
       gutters: ['CodeMirror-lint-markers'],
       viewportMargin: Infinity,
       readOnly: this.playground.mode === 'review'

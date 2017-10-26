@@ -40,7 +40,16 @@ module.exports = function TurtleToy(playground) {
       lineNumbers: true,
       lineWrapping: true,
       mode: 'javascript',
-      lint: { strict: 'implied', environment: 'browser', globals: { p: false, toy: false, Turtle: false } },
+      lint: {
+        strict: 'implied',
+        globals: {
+          window: false,
+          document: false,
+          p: false,
+          toy: false,
+          Turtle: false
+        }
+      },
       gutters: ['CodeMirror-lint-markers'],
       viewportMargin: Infinity,
       readOnly: this.playground.mode === 'review'
