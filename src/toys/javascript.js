@@ -11,7 +11,7 @@ module.exports = function JavasriptToy(playground) {
 
   this.playground.box.innerHTML =
     '<div class="editor-wrapper"></div>' +
-    '<button class="button">&#9654; Spustit kód</button>';
+    '<button type="button" class="button">&#9654; Spustit kód</button>';
 
   this.editor = CodeMirror(
     this.playground.box.querySelector('.editor-wrapper'),

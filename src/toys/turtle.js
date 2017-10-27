@@ -20,7 +20,7 @@ module.exports = function TurtleToy(playground) {
       <div class="editor-wrapper columns medium-6"></div>
       <div class="columns medium-6">
         <div id="${this.id}" class="p5js-preview" style="height: 400px; background: #eee"></div>
-          <button class="button">&#9654; Spustit kód</button>
+          <button type="button" class="button">&#9654; Spustit kód</button>
         </div>
     </div>`;
   this.canvasBox = this.playground.box.querySelector(`#${this.id}`);
