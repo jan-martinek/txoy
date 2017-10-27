@@ -44,6 +44,7 @@ module.exports = function P5Toy(playground) {
         globals: {
           window: false,
           document: false,
+          console: false,
           p: false,
           toy: false
         }

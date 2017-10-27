@@ -25,6 +25,7 @@ module.exports = function JavasriptToy(playground) {
         globals: {
           window: false,
           document: false,
+          console: false,
           toy: false
         }
       },

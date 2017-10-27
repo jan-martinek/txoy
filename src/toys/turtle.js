@@ -45,6 +45,7 @@ module.exports = function TurtleToy(playground) {
         globals: {
           window: false,
           document: false,
+          console: false,
           p: false,
           toy: false,
           Turtle: false
