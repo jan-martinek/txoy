@@ -6,7 +6,7 @@ function Toy(el) {
   this.toy = null;
 
   this.answerId = el.dataset.answer;
-  this.answered = el.dataset.answered === 1;
+  this.answered = el.dataset.answered === "1";
   this.mode = el.dataset.mode;
   this.toyName = el.dataset.toy;
 
