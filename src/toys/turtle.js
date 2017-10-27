@@ -63,6 +63,7 @@ module.exports = function TurtleToy(playground) {
     this.canvasBox.innerHTML = '';
     this.sketch = new p5(function UserCode(p) { eval(code); }, this.id);
     e.preventDefault();
+    e.stopPropagation();
   });
 
   this.save = () => {

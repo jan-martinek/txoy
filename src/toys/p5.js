@@ -61,6 +61,7 @@ module.exports = function P5Toy(playground) {
     this.canvasBox.innerHTML = '';
     this.sketch = new p5((p) => { eval(code); }, this.id);
     e.preventDefault();
+    e.stopPropagation();
   });
 
   this.save = () => {

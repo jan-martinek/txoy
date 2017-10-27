@@ -42,6 +42,7 @@ module.exports = function JavasriptToy(playground) {
     this.code = function UserCode() { eval(code); };
     this.code();
     e.preventDefault();
+    e.stopPropagation();
   });
 
   this.save = () => {
