@@ -1,6 +1,6 @@
 {
   "name": "txoy",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "Txoy — transform textareas to various interactive coding editors",
   "main": "main.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "foundation-sites": "^6.4.4-rc1",
     "jshint": "^2.9.5",
     "marked": "^0.3.6",
-    "p.turtle": "^0.1.2",
+    "p.turtle": "^0.2.0",
     "p5": "^0.5.16"
   },
   "devDependencies": {
